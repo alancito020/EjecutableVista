@@ -35,6 +35,7 @@ namespace carga2
             psi.WindowStyle = ProcessWindowStyle.Hidden;
             psi.FileName = @"C:\Users\ferna\source\repos\carga2\autoScan.bat";
             Process.Start(psi);
+            Process.WaitForExit(psi);
             //--------------------------------------------
             //Process.Start(@"C:\Users\ferna\source\repos\carga2\autoScan.bat");
             //--------------------------------------------
@@ -62,7 +63,7 @@ namespace carga2
             {
                 Console.WriteLine("Exception Occurred :{0},{1}", ex.Message, ex.StackTrace.ToString());
             }*/
-            
+
         }
     }
 }
